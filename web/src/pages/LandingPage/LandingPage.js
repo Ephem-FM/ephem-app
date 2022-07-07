@@ -8,17 +8,22 @@ const LandingPage = () => {
     <>
       <MetaTags title="EPHEM.FM" description="fm landing page" />
       <Link
-        to={routes.inputPrefs()}
+        to={routes.landing()}
         className="absolute top-0 right-0 mr-4 mt-4 bg-red rounded-sm px-2 py-1 shadow-red-glow"
       >
         <p className="font-main font-black text-yellow uppercase">
           request new vibe
         </p>
       </Link>
+      <div className="shadow-red-glow-lg bg-yellow max-w-fit text-2xl absolute top-1/4 left-[15%] z-10 px-4 py-2 -rotate-12 border-red border-2">
+        <p className="text-red uppercase font-main font-black">
+          under construction
+        </p>
+      </div>
       <div className="min-w-full min-h-[90vh] flex flex-col justify-center items-center">
         <img src={Logo} alt="fm logo" className="lg:max-w-[65%] mx-auto"></img>
         <Link
-          to={routes.newUser()}
+          to={routes.landing()}
           className="bg-yellow rounded-sm px-2 py-1 shadow-yellow-glow mt-8 hover:shadow-yellow-glow-lg transition-shadow ease-in-out"
         >
           <p className="font-main font-black text-red uppercase">enter</p>

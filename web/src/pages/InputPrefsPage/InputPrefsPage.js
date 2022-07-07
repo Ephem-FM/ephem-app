@@ -23,7 +23,7 @@ const InputPrefsPage = () => {
             Valence
           </Label>
           <NumberField
-            className="text-black font-mono outline-none"
+            className="text-black font-mono outline-none text-2xl rounded-sm"
             type="number"
             id="valence"
             name="valence"
@@ -40,7 +40,7 @@ const InputPrefsPage = () => {
             energy
           </Label>
           <NumberField
-            className="text-black font-mono outline-none"
+            className="text-black font-mono outline-none text-2xl rounded-sm"
             type="number"
             id="energy"
             name="energy"
@@ -57,7 +57,7 @@ const InputPrefsPage = () => {
             instrumentalness
           </Label>
           <NumberField
-            className="text-black font-mono outline-none"
+            className="text-black font-mono outline-none text-2xl rounded-sm"
             type="number"
             id="instrumentalness"
             name="instrumentalness"
@@ -74,7 +74,7 @@ const InputPrefsPage = () => {
             danceability
           </Label>
           <NumberField
-            className="text-black font-mono outline-none"
+            className="text-black font-mono outline-none text-2xl rounded-sm"
             type="number"
             id="danceability"
             name="danceability"
@@ -91,7 +91,7 @@ const InputPrefsPage = () => {
             popularity
           </Label>
           <NumberField
-            className="text-black font-mono outline-none"
+            className="text-black font-mono outline-none text-2xl rounded-sm"
             type="number"
             id="popularity"
             name="popularity"

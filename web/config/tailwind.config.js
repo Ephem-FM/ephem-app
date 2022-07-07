@@ -14,6 +14,7 @@ module.exports = {
       },
       boxShadow: {
         'red-glow': '2px 2px 10px #F41404',
+        'red-glow-lg': '2px 2px 30px #F41404',
         'yellow-glow': '2px 2px 10px #FFEB2F;',
         'yellow-glow-lg': '2px 2px 30px #FFEB2F;',
       },
