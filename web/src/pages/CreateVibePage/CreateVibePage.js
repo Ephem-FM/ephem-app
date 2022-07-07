@@ -10,7 +10,7 @@ const CREATE_VIBE = gql`
   }
 `
 
-const InputPrefsPage = () => {
+const CreateVibePage = () => {
   return (
     <>
       <MetaTags title="YR VIBE" description="your vibe page" />
@@ -106,4 +106,4 @@ const InputPrefsPage = () => {
   )
 }
 
-export default InputPrefsPage
+export default CreateVibePage

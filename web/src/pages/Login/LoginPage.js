@@ -19,16 +19,11 @@ const CREATE_USER = gql`
 //     }
 //   }
 // `
-const NewUserPage = () => {
-  // const { load, error, data } = useQuery(GET_USER)
-  // if (load) <p>'Loading...' </p>
-  // if (error) <p> `Error! ${error.message}` </p>
-  // if (data) <p>`${data}`</p>
-
+const LoginPage = () => {
   const [create, { loading }] = useMutation(CREATE_USER, {
     onCompleted: () => {
       toast.success('VIBE: CREATED')
-      navigate(routes.inputPrefs())
+      navigate(routes.createVibe())
     },
     onError: () => {
       toast.error('VIBE: BAD')
@@ -79,4 +74,4 @@ const NewUserPage = () => {
   )
 }
 
-export default NewUserPage
+export default LoginPage

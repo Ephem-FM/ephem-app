@@ -14,9 +14,9 @@ import MainLayout from './layouts/MainLayout/MainLayout'
 const Routes = () => {
   return (
     <Router>
-      <Route path="/nu-vibe" page={NewUserPage} name="newUser" />
       <Set wrap={MainLayout}>
-        <Route path="/yr-vibe" page={InputPrefsPage} name="inputPrefs" />
+        <Route path="/nu-vibe" page={Login} name="login" />
+        <Route path="/yr-vibe" page={CreateVibePage} name="createVibe" />
         <Route path="/vibe-check" page={DisclaimerPage} name="disclaimer" />
         <Route path="/home" page={HomePage} name="home" />
         <Route path="/" page={LandingPage} name="landing" />

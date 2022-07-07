@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .heading-text {
+    @apply font-main text-base lg:text-3xl uppercase
+  }
+  .caption-text {
+    @apply font-main text-xs lg:text-lg uppercase
+  }
+  .btn-red {
+    @apply bg-red text-yellow border-yellow border-2 shadow-yellow-glow hover:shadow-yellow-glow-lg rounded-sm px-2 py-1 lg:px-4 transition-shadow ease-in-out duration-fast
+  }
+  .btn-yellow {
+    @apply bg-yellow text-red border-red border-2 shadow-red-glow hover:shadow-red-glow-lg rounded-sm px-2 py-1 lg:px-4 transition-shadow ease-in-out duration-fast
+  }
+}
+@font-face {
+  font-family: 'Mister Pixel';
+  src: url('fonts/misterpixel/mister_pixel.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mister Pixel Tools';
+  src: url('fonts/misterpixel/mister_pixel_tools.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 html {
   background-color: black;

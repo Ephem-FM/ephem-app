@@ -8,29 +8,26 @@ const MainLayout = ({ children }) => {
   return (
     <>
       <header>
-        <Link to={routes.landing()} className="absolute top-0 ml-4 mt-4">
+        <Link
+          to={routes.landing()}
+          className="absolute top-0 ml-4 mt-4 hover:scale-[125%] hover:translate-x-1/4 transition-all ease-in-out duration-regular"
+        >
           <img
             src={Logo}
             alt={'ephem logo'}
-            className="max-w-[30px] max-h-[30px]"
+            className="max-w-[30px] max-h-[30px] transition-all"
           />
         </Link>
       </header>
-      <main className="min-h-[75%] m-4">{children}</main>
+      <main className="flex flex-col grow">{children}</main>
       <footer className="fixed bottom-0">
         <Marquee gradient={false}>
-          <p className="font-main font-black text-yellow uppercase tracking-tight">
-            ephem.fm is an fda approved vibe curator.{' '}
-          </p>
-          <p className="font-main font-black text-yellow uppercase tracking-tight">
-            ephem.fm is an fda approved vibe curator.{' '}
-          </p>
-          <p className="font-main font-black text-yellow uppercase tracking-tight">
-            ephem.fm is an fda approved vibe curator.{' '}
-          </p>
-          <p className="font-main font-black text-yellow uppercase tracking-tight">
-            ephem.fm is an fda approved vibe curator.{' '}
-          </p>
+          {[0, 1, 2, 3, 4, 5, 6, 7].map((item) => (
+            <p key={item} className="caption-text text-yellow">
+              ephem.fm is an fda approved vibe curator.
+              <span>&nbsp;&nbsp;</span>
+            </p>
+          ))}
         </Marquee>
       </footer>
     </>

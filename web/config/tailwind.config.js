@@ -3,8 +3,14 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      main: ['Helvetica', 'sans-serif'],
-      mono: ['monospace'],
+      main: ['Mister Pixel', 'monospace'],
+      weird: ['Mister Pixel Tools', 'monospace'],
+    },
+    transitionDuration: {
+      fast: '400ms',
+      regular: '500ms',
+      slower: '650ms',
+      slow: '1s',
     },
     extend: {
       colors: {
@@ -13,10 +19,10 @@ module.exports = {
         grey: '#DFD6DB',
       },
       boxShadow: {
-        'red-glow': '2px 2px 10px #F41404',
-        'red-glow-lg': '2px 2px 30px #F41404',
-        'yellow-glow': '2px 2px 10px #FFEB2F;',
-        'yellow-glow-lg': '2px 2px 30px #FFEB2F;',
+        'red-glow': '-2px 4px 1px #F41404',
+        'red-glow-lg': '-4px 6px 2px #F41404',
+        'yellow-glow': '-2px 4px 1px #FFEB2F;',
+        'yellow-glow-lg': '-4px 6px 2px #FFEB2F;',
       },
     },
   },
