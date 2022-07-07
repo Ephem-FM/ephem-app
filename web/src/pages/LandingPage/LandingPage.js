@@ -15,7 +15,7 @@ const LandingPage = () => {
           request new vibe
         </p>
       </Link>
-      <div className="shadow-red-glow-lg bg-yellow max-w-fit text-2xl absolute top-1/4 left-[15%] z-10 px-4 py-2 -rotate-12 border-red border-2">
+      <div className="shadow-red-glow-lg bg-yellow max-w-fit lg:text-2xl absolute top-[40%] text-xs lg:top-1/2 left-[30%] lg:left-[15%] z-10 px-4 py-2 -rotate-6 lg:-rotate-12 border-red border-2">
         <p className="text-red uppercase font-main font-black">
           under construction
         </p>
