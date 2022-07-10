@@ -13,7 +13,7 @@ const LandingPage = () => {
       >
         <p className="text-yellow caption-text">request new vibe</p>
       </Link>
-      <div className="min-w-full min-h-[90vh] flex flex-col justify-center items-center">
+      <div className="min-w-full min-h-[90vh] flex flex-col justify-center items-center px-4">
         <img src={Logo} alt="fm logo" className="lg:max-w-[65%] mx-auto"></img>
         <Link to={routes.disclaimer()} className="mt-8 btn-yellow">
           <p className="font-black text-red font-main heading-text">enter</p>

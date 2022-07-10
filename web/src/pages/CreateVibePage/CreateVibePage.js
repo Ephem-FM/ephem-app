@@ -14,6 +14,9 @@ const CreateVibePage = () => {
   return (
     <>
       <MetaTags title="YR VIBE" description="your vibe page" />
+      <p className="mx-auto heading-text text-yellow lg:text-4xl lg:mt-[10%] mt-[20%]">
+        vibe selector 1.0
+      </p>
       <Form className="text-grey flex flex-col gap-10 my-[10%] items-center outline-none">
         <div className="flex flex gap-2">
           <Label
@@ -23,7 +26,7 @@ const CreateVibePage = () => {
             Valence
           </Label>
           <NumberField
-            className="text-black font-mono outline-none text-2xl rounded-sm"
+            className="text-black font-main outline-none text-2xl rounded-sm"
             type="number"
             id="valence"
             name="valence"
@@ -40,7 +43,7 @@ const CreateVibePage = () => {
             energy
           </Label>
           <NumberField
-            className="text-black font-mono outline-none text-2xl rounded-sm"
+            className="text-black font-main outline-none text-2xl rounded-sm"
             type="number"
             id="energy"
             name="energy"
@@ -57,7 +60,7 @@ const CreateVibePage = () => {
             instrumentalness
           </Label>
           <NumberField
-            className="text-black font-mono outline-none text-2xl rounded-sm"
+            className="text-black font-main outline-none text-2xl rounded-sm"
             type="number"
             id="instrumentalness"
             name="instrumentalness"
@@ -74,7 +77,7 @@ const CreateVibePage = () => {
             danceability
           </Label>
           <NumberField
-            className="text-black font-mono outline-none text-2xl rounded-sm"
+            className="text-black font-main outline-none text-2xl rounded-sm"
             type="number"
             id="danceability"
             name="danceability"
@@ -91,7 +94,7 @@ const CreateVibePage = () => {
             popularity
           </Label>
           <NumberField
-            className="text-black font-mono outline-none text-2xl rounded-sm"
+            className="text-black font-main outline-none text-2xl rounded-sm"
             type="number"
             id="popularity"
             name="popularity"
@@ -100,7 +103,7 @@ const CreateVibePage = () => {
             step=".1"
           />
         </div>
-        <Submit />
+        <Submit className="text-white">Submit</Submit>
       </Form>
     </>
   )

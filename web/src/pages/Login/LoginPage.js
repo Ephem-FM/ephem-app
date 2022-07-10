@@ -12,13 +12,6 @@ const CREATE_USER = gql`
     }
   }
 `
-// const GET_USER = gql`
-//   query GetUser {
-//     user {
-//       phone: "8478481884"
-//     }
-//   }
-// `
 const LoginPage = () => {
   const [create, { loading }] = useMutation(CREATE_USER, {
     onCompleted: () => {
@@ -35,7 +28,7 @@ const LoginPage = () => {
   }
   return (
     <>
-      <MetaTags title="NU VIBE" description="new vibe page" />
+      <MetaTags title="NU VIBER" description="new vibe page" />
       <Toaster />
       <Form
         onSubmit={onSubmit}
