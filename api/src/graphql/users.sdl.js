@@ -2,8 +2,9 @@ export const schema = gql`
   type User {
     id: String!
     createdAt: DateTime!
-    alias: String!
-    phone: String
+    username: String!
+    hashedPassword: String!
+    phone: String!
     vibe: Vibe
   }
 
@@ -13,13 +14,13 @@ export const schema = gql`
   }
 
   input CreateUserInput {
-    alias: String!
-    phone: String
+    username: String!
+    hashedPassword: String
   }
 
   input UpdateUserInput {
-    alias: String
-    phone: String
+    username: String
+    hashedPassword: String
   }
 
   type Mutation {

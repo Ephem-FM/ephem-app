@@ -14,11 +14,11 @@ const CreateVibePage = () => {
   return (
     <>
       <MetaTags title="YR VIBE" description="your vibe page" />
-      <p className="mx-auto heading-text text-yellow lg:text-4xl lg:mt-[10%] mt-[20%]">
+      <p className="mx-auto heading-text text-red lg:text-4xl lg:mt-[10%] mt-[20%]">
         vibe selector 1.0
       </p>
       <Form className="text-grey flex flex-col gap-10 my-[10%] items-center outline-none">
-        <div className="flex flex gap-2">
+        <div className="flex items-center gap-2">
           <Label
             htmlFor="valence"
             className="font-main font-bold text-yellow uppercase"
@@ -26,7 +26,7 @@ const CreateVibePage = () => {
             Valence
           </Label>
           <NumberField
-            className="text-black font-main outline-none text-2xl rounded-sm"
+            className="text-black font-main outline-none text-2xl rounded-sm border-red border-2"
             type="number"
             id="valence"
             name="valence"
@@ -35,7 +35,7 @@ const CreateVibePage = () => {
             step=".1"
           />
         </div>
-        <div className="flex flex gap-2">
+        <div className="flex items-center gap-2">
           <Label
             htmlFor="energy"
             className="font-main font-bold text-yellow uppercase"
@@ -43,7 +43,7 @@ const CreateVibePage = () => {
             energy
           </Label>
           <NumberField
-            className="text-black font-main outline-none text-2xl rounded-sm"
+            className="text-black font-main outline-none text-2xl rounded-sm border-red border-2"
             type="number"
             id="energy"
             name="energy"
@@ -52,7 +52,7 @@ const CreateVibePage = () => {
             step=".1"
           />
         </div>
-        <div className="flex flex gap-2">
+        <div className="flex items-center gap-2">
           <Label
             htmlFor="instrumentalness"
             className="font-main font-bold text-yellow uppercase"
@@ -60,7 +60,7 @@ const CreateVibePage = () => {
             instrumentalness
           </Label>
           <NumberField
-            className="text-black font-main outline-none text-2xl rounded-sm"
+            className="text-black font-main outline-none text-2xl rounded-sm border-red border-2"
             type="number"
             id="instrumentalness"
             name="instrumentalness"
@@ -69,7 +69,7 @@ const CreateVibePage = () => {
             step=".1"
           />
         </div>
-        <div className="flex flex gap-2">
+        <div className="flex items-center gap-2">
           <Label
             htmlFor="danceability"
             className="font-main font-bold text-yellow uppercase"
@@ -77,7 +77,7 @@ const CreateVibePage = () => {
             danceability
           </Label>
           <NumberField
-            className="text-black font-main outline-none text-2xl rounded-sm"
+            className="text-black font-main outline-none text-2xl rounded-sm border-red border-2"
             type="number"
             id="danceability"
             name="danceability"
@@ -86,7 +86,7 @@ const CreateVibePage = () => {
             step=".1"
           />
         </div>
-        <div className="flex flex gap-2">
+        <div className="flex items-center gap-2">
           <Label
             htmlFor="popularity"
             className="font-main font-bold text-yellow uppercase"
@@ -94,7 +94,7 @@ const CreateVibePage = () => {
             popularity
           </Label>
           <NumberField
-            className="text-black font-main outline-none text-2xl rounded-sm"
+            className="text-black font-main outline-none text-2xl rounded-sm border-red border-2"
             type="number"
             id="popularity"
             name="popularity"
@@ -103,7 +103,7 @@ const CreateVibePage = () => {
             step=".1"
           />
         </div>
-        <Submit className="text-white">Submit</Submit>
+        <Submit className="btn-yellow caption-text">Submit</Submit>
       </Form>
     </>
   )

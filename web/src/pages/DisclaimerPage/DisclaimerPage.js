@@ -13,16 +13,16 @@ const DisclaimerPage = () => {
           pre flight check{' '}
         </div>
       </div>
-      <div className="lg:text-2xl text-yellow transition ease-in-out duration-500 lg:max-w-[50%] text-center">
+      <p className="lg:text-2xl text-yellow lg:max-w-[50%] text-center leading-loose">
         EPHEM.FM's propietary vibe discovery algorithm will match a radio
         station with your mood. Give us your phone and your mood. We'll provide
         The Vibes, guaranteed.{' '}
-      </div>
+      </p>
       <Link
-        to={routes.login()}
+        to={routes.signup()}
         className="bg-yellow border-2 border-red rounded-sm px-2 py-1 shadow-red-glow hover:shadow-red-glow-lg"
       >
-        <p className="caption-text text-red">choose my vibe</p>
+        <p className="caption-text text-red">roger</p>
       </Link>
     </div>
   )
