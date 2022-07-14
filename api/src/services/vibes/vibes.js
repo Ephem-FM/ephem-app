@@ -4,9 +4,9 @@ export const vibes = () => {
   return db.vibe.findMany()
 }
 
-export const vibe = ({ id }) => {
+export const vibe = ({ userId }) => {
   return db.vibe.findUnique({
-    where: { id },
+    where: { userId },
   })
 }
 

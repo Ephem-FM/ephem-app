@@ -6,8 +6,21 @@ import { Link, routes } from '@redwoodjs/router'
 import Logo from './logo.png'
 
 const MainLayout = ({ children }) => {
-  const { logOut } = useAuth()
+  const { logOut, isAuthenticated, currentUser } = useAuth()
+  const timeDiff = () =>
+    currentUser
+      ? Math.round((new Date(currentUser.createdAt) - Date.now()) * 0.001) * -1
+      : 0
+  const [timeLeft, setTimeLeft] = React.useState(timeDiff())
+  React.useEffect(() => {
+    const id = setTimeout(() => {
+      setTimeLeft(timeDiff())
+    }, 1000)
 
+    return () => {
+      clearTimeout(id)
+    }
+  })
   return (
     <>
       <header>
@@ -21,12 +34,21 @@ const MainLayout = ({ children }) => {
             className="max-w-[30px] max-h-[30px] transition-all"
           />
         </Link>
-        <button
-          onClick={logOut}
-          className="absolute top-0 right-0 mr-4 mt-4 hover:scale-[125%] transition-all ease-in-out duration-regular"
-        >
-          <p className="font-weird uppercase text-xl text-red">y</p>
-        </button>
+        {isAuthenticated && (
+          <div className="absolute top-0 right-0 mr-4 mt-4">
+            <button onClick={logOut}>
+              <div className="flex items-center gap-2">
+                <p className="caption-text text-yellow">
+                  ALIAS: {currentUser.username}
+                </p>
+                <p className="font-weird uppercase text-sm text-red">y</p>
+              </div>
+              <p className="caption-text text-yellow">
+                vibe duration: <span className="text-red">{timeLeft} SEC</span>
+              </p>
+            </button>
+          </div>
+        )}
       </header>
       <main className="flex flex-col grow">{children}</main>
       <footer className="fixed bottom-0">

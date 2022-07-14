@@ -5,7 +5,7 @@ import { MetaTags } from '@redwoodjs/web'
 
 const DisclaimerPage = () => {
   return (
-    <div className="grow flex flex-col items-center mt-[10%] px-4 font-main gap-4">
+    <div className="grow flex flex-col items-center mt-[20%] lg:mt-[10%] px-4 font-main gap-4">
       <MetaTags title="VIBE CHECK" description="vibe check page" />
       <p className="heading-text text-yellow text-center font-bold lg:text-4xl"></p>
       <div className="inline-block">

@@ -31,7 +31,7 @@ const SignupPage = () => {
   return (
     <>
       <MetaTags title="NEW VIBE" />
-      <div className="flex flex-col items-center mt-[20%] grow">
+      <div className="flex flex-col items-center lg:mt-[10%] mt-[20%] grow">
         <Toaster toastOptions={{ className: 'caption-text', duration: 6000 }} />
         <Form onSubmit={onSubmit} className="flex flex-col items-center gap-8">
           <div className="flex flex-col gap-2">
@@ -70,7 +70,7 @@ const SignupPage = () => {
               }}
             />
             <Link
-              to={routes.forgotPassword()}
+              to={routes.landing()}
               className="caption-text text-red text-xs text-right"
             >
               can't vibe?

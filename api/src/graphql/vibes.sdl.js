@@ -16,30 +16,23 @@ export const schema = gql`
 
   type Query {
     vibes: [Vibe!]! @requireAuth
-    vibe(id: String!): Vibe @requireAuth
+    vibe(userId: String!): Vibe @requireAuth
   }
 
   input CreateVibeInput {
-    updated: DateTime!
-    compositeScore: Float!
     popularity: Float!
     valence: Float!
     danceability: Float!
     energy: Float!
-    instrumentalness: Float!
-    genre: String!
     userId: String!
   }
 
   input UpdateVibeInput {
-    updated: DateTime
-    compositeScore: Float
+    updated: DateTime!
     popularity: Float
     valence: Float
     danceability: Float
     energy: Float
-    instrumentalness: Float
-    genre: String
     userId: String
   }
 

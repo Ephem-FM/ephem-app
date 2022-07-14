@@ -1,4 +1,3 @@
-import { useRef } from 'react'
 import { useEffect } from 'react'
 
 import { useAuth } from '@redwoodjs/auth'
@@ -12,41 +11,36 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate(routes.createVibe())
+      navigate(routes.currentVibe())
     }
   }, [isAuthenticated])
 
-  const aliasRef = useRef()
-  useEffect(() => {
-    aliasRef.current.focus()
-  }, [])
-
   const onSubmit = async (data) => {
-    const response = await logIn({ ...data })
-
+    const phone = data.password
+    const response = await logIn({ ...data, phone })
     if (response.message) {
       toast(response.message)
     } else if (response.error) {
-      toast.error(response.error)
+      toast.error('alias or phone incorrect')
     } else {
-      toast.success('Welcome back!')
+      // user is signed in automatically
+      toast.success('yr in')
     }
   }
 
   return (
     <>
-      <MetaTags title="EXISTING VIBE" />
-      <div className="flex flex-col items-center mt-[20%] grow">
+      <MetaTags title="NEW VIBE" />
+      <div className="flex flex-col items-center lg:mt-[10%] mt-[20%] grow">
         <Toaster toastOptions={{ className: 'caption-text', duration: 6000 }} />
         <Form onSubmit={onSubmit} className="flex flex-col items-center gap-8">
           <div className="flex flex-col gap-2">
-            <Label name="alias" className="caption-text text-yellow">
+            <Label name="username" className="caption-text text-yellow">
               Alias
             </Label>
             <TextField
-              name="alias"
+              name="username"
               className="bg-transparent border-b-2 border-yellow outline-none font-main caption-text text-yellow"
-              ref={aliasRef}
               validation={{
                 required: {
                   value: true,
@@ -56,16 +50,16 @@ const LoginPage = () => {
             />
 
             <FieldError
-              name="alias"
-              className="caption-text text-xs text-red"
+              name="username"
+              className="caption-text text-red text-xs"
             />
           </div>
           <div className="flex flex-col gap-2">
-            <Label name="phone" className="text-yellow caption-text">
+            <Label name="password" className="text-yellow caption-text">
               Phone
             </Label>
             <TextField
-              name="phone"
+              name="password"
               className="bg-transparent border-b-2 border-yellow outline-none font-main caption-text text-yellow"
               autoComplete="current-password"
               validation={{
@@ -76,14 +70,14 @@ const LoginPage = () => {
               }}
             />
             <Link
-              to={routes.forgotPassword()}
+              to={routes.landing()}
               className="caption-text text-red text-xs text-right"
             >
               can't vibe?
             </Link>
             <FieldError
               name="password"
-              className="text-xs caption-text text-red"
+              className="caption-text text-red text-xs"
             />
           </div>
 
@@ -93,7 +87,7 @@ const LoginPage = () => {
         </Form>
 
         <div className="caption-text text-grey text-xs text-center mt-4">
-          <Link to={routes.signup()}>New here?</Link>
+          <Link to={routes.signup()}>new here?</Link>
         </div>
       </div>
     </>

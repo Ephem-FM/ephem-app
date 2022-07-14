@@ -21,16 +21,13 @@ model User {
 }
 
 model Vibe {
-  id               String   @id @default(cuid())
-  createdAt        DateTime @default(now())
-  updated          DateTime @updatedAt
-  compositeScore   Float    @default(0)
-  popularity       Float
-  valence          Float
-  danceability     Float
-  energy           Float
-  instrumentalness Float
-  genre            String
-  user             User     @relation(fields: [userId], references: [id])
-  userId           String   @unique
+  id           String   @id @default(cuid())
+  createdAt    DateTime @default(now())
+  updated      DateTime @updatedAt
+  popularity   Float
+  valence      Float
+  danceability Float
+  energy       Float
+  user         User     @relation(fields: [userId], references: [id])
+  userId       String   @unique
 }

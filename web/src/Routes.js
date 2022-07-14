@@ -15,12 +15,13 @@ const Routes = () => {
   return (
     <Router>
       <Set wrap={MainLayout}>
-        <Route path="/existing-vibe" page={LoginPage} name="login" />
-        <Route path="/new-vibe" page={SignupPage} name="signup" />
-        <Route path="/forgot-vibe" page={ForgotPasswordPage} name="forgotPassword" />
-        <Route path="/reset-vibe" page={ResetPasswordPage} name="resetPassword" />
+        <Route path="/existing" page={LoginPage} name="login" />
+        <Route path="/new" page={SignupPage} name="signup" />
+        <Route path="/forgot" page={ForgotPasswordPage} name="forgotPassword" />
+        <Route path="/reset" page={ResetPasswordPage} name="resetPassword" />
         <Private unauthenticated="landing">
-          <Route path="/yr-vibe" page={CreateVibePage} name="createVibe" />
+          <Route path="/make-vibe" page={CreateVibePage} name="createVibe" />
+          <Route path="/yr-vibe" page={CurrentVibePage} name="currentVibe" />
         </Private>
         <Route path="/vibe-check" page={DisclaimerPage} name="disclaimer" />
         <Route path="/" page={LandingPage} name="landing" />
