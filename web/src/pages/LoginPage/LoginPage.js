@@ -33,7 +33,10 @@ const LoginPage = () => {
       <MetaTags title="NEW VIBE" />
       <div className="flex flex-col items-center lg:mt-[10%] mt-[20%] grow">
         <Toaster toastOptions={{ className: 'caption-text', duration: 6000 }} />
-        <Form onSubmit={onSubmit} className="flex flex-col items-center gap-8">
+        <Form
+          onSubmit={onSubmit}
+          className="flex flex-col items-center min-w-full gap-8"
+        >
           <div className="flex flex-col gap-2">
             <Label name="username" className="caption-text text-yellow">
               Alias
@@ -60,7 +63,7 @@ const LoginPage = () => {
             </Label>
             <TextField
               name="password"
-              className="bg-transparent border-b-2 border-yellow outline-none font-main caption-text text-yellow"
+              className="bg-transparent border-b-2 border-yellow outline-none font-main caption-text text-yellow rounded-0"
               autoComplete="current-password"
               validation={{
                 required: {
