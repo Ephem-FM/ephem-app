@@ -1,3 +1,18 @@
 # README
 
-The front end for our app!  It is build using Redwood JS.  We take in 'alias' and 'phone number' of users and then save those to a users table.  Users are then allowed to select their musical preferences which is sent as a POST request to external API and which schedules texts of shows matching their preferences. Building authentication so that users who have already selected their week's preferences can come back in and immediately be shown their 'vibe' and be able to change it should they want to.
+## Install Instructions
+
+1. Clone the repo
+2. `yarn install`
+3. Create an `.env` file at the project root
+4. Fill `.env` with the following ...
+  ```
+    SESSION_SECRET=''
+    DATABASE_URL=''
+
+  ```
+  SESSION_SECRET can be generated in the command line via `yarn rw g secret`
+  DATABASE_URL is the Railway PSQL connection string (ensure you're in the development DB!)
+5. `yarn rw dev` will start the server
+
+Let 'er rip
