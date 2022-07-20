@@ -13,17 +13,11 @@ import Logo from './logo.png'
 const MainLayout = ({ children }) => {
   const { logOut, isAuthenticated, currentUser } = useAuth()
   const [loading, setLoading] = useState(true)
-  const [device, setDevice] = useState()
 
   const audioRef = useRef()
   const toggleAudio = (ref) => {
     ref?.current?.paused ? ref?.current?.play() : ref?.current?.pause()
   }
-  useEffect(() => {
-    window.addEventListener('keydown', () => toggleAudio(audioRef))
-    setDevice(window.outerWidth < 600 ? 'MOBILE' : 'DESKTOP')
-    return () => window.removeEventListener('keydown', toggleAudio(audioRef))
-  })
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -37,8 +31,16 @@ const MainLayout = ({ children }) => {
   ) : (
     <FadeIn>
       <header>
+        <audio
+          className="hidden"
+          autoPlay
+          ref={audioRef}
+          src="https://t4.bcbits.com/stream/d86b96d11eefb7f7fbf96fe0a180733f/mp3-128/4153722682?p=0&ts=1658433496&t=a1abe1889ca75ffe24f87432d1309d7bed01838f&token=1658433496_9aca2e4480777c464ecd21a078e43a2a4a9397bf"
+        >
+          <track kind="captions"></track>
+        </audio>
         <Link
-          onClick={() => device == 'MOBILE' && toggleAudio()}
+          onClick={() => toggleAudio()}
           to={routes.landing()}
           className="absolute top-0 ml-4 mt-4 hover:scale-[125%] hover:translate-x-1/4 transition-all ease-in-out duration-regular"
         >
@@ -50,13 +52,6 @@ const MainLayout = ({ children }) => {
         </Link>
         {isAuthenticated && (
           <>
-            <audio
-              className="hidden"
-              ref={audioRef}
-              src="https://t4.bcbits.com/stream/d86b96d11eefb7f7fbf96fe0a180733f/mp3-128/4153722682?p=0&ts=1658433496&t=a1abe1889ca75ffe24f87432d1309d7bed01838f&token=1658433496_9aca2e4480777c464ecd21a078e43a2a4a9397bf"
-            >
-              <track kind="captions"></track>
-            </audio>
             <div className="absolute top-0 right-0 mr-4 mt-4">
               <div className="flex items-center gap-2">
                 <p className="caption-text text-yellow">
@@ -85,7 +80,7 @@ const MainLayout = ({ children }) => {
             if (item % 3 == 1) {
               return (
                 <p key={item} className="text-red caption-text">
-                  press {device == 'MOBILE' ? `logo` : `any key`} to vibe
+                  press logo to vibe
                   <span>&nbsp;&nbsp;</span>
                 </p>
               )
