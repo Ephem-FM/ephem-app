@@ -80,19 +80,12 @@ const MainLayout = ({ children }) => {
             if (item % 3 == 1) {
               return (
                 <p key={item} className="text-red caption-text">
-                  press logo to vibe
+                ephem.fm is an fda approved vibe curator.
                   <span>&nbsp;&nbsp;</span>
                 </p>
               )
             }
-            if (item == 10 || item == 20) {
-              return (
-                <p key={item} className="text-grey caption-text">
-                  {`<3 to kerri chandler for the vibes`}
-                  <span>&nbsp;&nbsp;</span>
-                </p>
-              )
-            }
+
             if (item == 15) {
               return (
                 <p key={item} className="text-red caption-text">
