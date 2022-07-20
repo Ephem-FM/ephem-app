@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 
 import Marquee from 'react-fast-marquee'
 
@@ -14,10 +14,10 @@ const MainLayout = ({ children }) => {
   const { logOut, isAuthenticated, currentUser } = useAuth()
   const [loading, setLoading] = useState(true)
 
-  const audioRef = useRef()
-  const toggleAudio = (ref) => {
-    ref?.current?.paused ? ref?.current?.play() : ref?.current?.pause()
-  }
+  // const audioRef = useRef()
+  // const toggleAudio = (ref) => {
+  //   ref?.current?.paused ? ref?.current?.play() : ref?.current?.pause()
+  // }
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,14 +31,14 @@ const MainLayout = ({ children }) => {
   ) : (
     <FadeIn>
       <header>
-        <audio
+        {/* <audio
           className="hidden"
           autoPlay
           ref={audioRef}
           src="https://t4.bcbits.com/stream/d86b96d11eefb7f7fbf96fe0a180733f/mp3-128/4153722682?p=0&ts=1658433496&t=a1abe1889ca75ffe24f87432d1309d7bed01838f&token=1658433496_9aca2e4480777c464ecd21a078e43a2a4a9397bf"
         >
           <track kind="captions"></track>
-        </audio>
+        </audio> */}
         <Link
           onClick={() => toggleAudio()}
           to={routes.landing()}
