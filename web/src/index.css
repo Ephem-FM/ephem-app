@@ -15,6 +15,7 @@
   .btn-yellow {
     @apply bg-yellow text-red border-red border-2 shadow-red-glow hover:shadow-red-glow-lg rounded-sm px-2 py-1 lg:px-4 transition-shadow ease-in-out duration-fast
   }
+
 }
 @font-face {
   font-family: 'Mister Pixel';
@@ -28,8 +29,18 @@
   font-weight: normal;
   font-style: normal;
 }
-
-
+@font-face {
+  font-family: 'Karrik';
+  src: url('fonts/karrik/Karrik-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Karrik';
+  src: url('fonts/karrik/Karrik-Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
 html {
   background-color: black;
 }

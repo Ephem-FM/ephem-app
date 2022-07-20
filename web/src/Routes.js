@@ -9,12 +9,13 @@
 
 import { Private, Router, Route, Set } from '@redwoodjs/router'
 
+import Loading from './components/loading'
 import MainLayout from './layouts/MainLayout/MainLayout'
 
 const Routes = () => {
   return (
     <Router>
-      <Set wrap={MainLayout}>
+      <Set wrap={MainLayout} whileLoadingAuth={Loading} whileLoadingPage={Loading}>
         <Route path="/existing" page={LoginPage} name="login" />
         <Route path="/new" page={SignupPage} name="signup" />
         <Route path="/forgot" page={ForgotPasswordPage} name="forgotPassword" />

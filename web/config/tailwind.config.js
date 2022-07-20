@@ -3,7 +3,8 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      main: ['Mister Pixel', 'monospace'],
+      main: ['Karrik', 'sans-serif'],
+      mono: ['Mister Pixel', 'monospace'],
       weird: ['Mister Pixel Tools', 'monospace'],
     },
     transitionDuration: {
