@@ -40,7 +40,7 @@ const MainLayout = ({ children }) => {
           <track kind="captions"></track>
         </audio> */}
         <Link
-          onClick={() => toggleAudio()}
+          onClick={() => null}
           to={routes.landing()}
           className="absolute top-0 ml-4 mt-4 hover:scale-[125%] hover:translate-x-1/4 transition-all ease-in-out duration-regular"
         >
@@ -80,7 +80,7 @@ const MainLayout = ({ children }) => {
             if (item % 3 == 1) {
               return (
                 <p key={item} className="text-red caption-text">
-                ephem.fm is an fda approved vibe curator.
+                  ephem.fm is an fda approved vibe curator.
                   <span>&nbsp;&nbsp;</span>
                 </p>
               )
